@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby -rubygems
 # -*- encoding: utf-8 -*-
 
-GEMSPEC = Gem::Specification.new do |gem|
+Gem::Specification.new do |gem|
   gem.version            = File.read('VERSION').chomp
   gem.date               = File.mtime('VERSION').strftime('%Y-%m-%d')
 
@@ -30,7 +30,7 @@ GEMSPEC = Gem::Specification.new do |gem|
   gem.add_development_dependency 'yard' ,           '>= 0.5.8'
   gem.add_development_dependency 'rspec',           '>= 1.3.0'
   gem.add_development_dependency 'rack-test',       '>= 0.5.4'
-  gem.add_runtime_dependency     'sinatra',         '>= 1.0'
   gem.add_runtime_dependency     'rack-linkeddata', '~> 0.2.0'
+  gem.add_runtime_dependency     'sinatra',         '>= 1.0'
   gem.post_install_message       = nil
 end
