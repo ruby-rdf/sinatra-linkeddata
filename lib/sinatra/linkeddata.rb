@@ -14,10 +14,19 @@ module Sinatra
     end
 
     ##
+    # * Registers Rack::LinkedData::ContentNegotiation
+    # * adds helpers
+    # * includes RDF and LinkedData
+    # * defines `linkeddata_options`, which are passed to the Rack middleware
+    #   available as `settings.linkeddata_options` and as options within
+    #   the LinkedData Rack middleware.
+    #
     # @param  [Sinatra::Base] app
     # @return [void]
     def self.registered(app)
-      app.use(Rack::LinkedData::ContentNegotiation)
+      options = {}
+      app.set :linkeddata_options, options
+      app.use(Rack::LinkedData::ContentNegotiation, options)
       app.helpers(Sinatra::LinkedData::Helpers)
       app.send(:include, ::RDF)
       app.send(:include, ::LinkedData)
