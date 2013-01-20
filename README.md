@@ -115,7 +115,7 @@ Dependencies
 ------------
 
 * [Sinatra](http://rubygems.org/gems/sinatra) (>= 1.0)
-* [Rack::LinkedData](http://rubygems.org/gems/rack-linkeddata) (>= 0.2.0)
+* [Rack::LinkedData](http://rubygems.org/gems/rack-linkeddata) (>= 1.0)
 
 Installation
 ------------
@@ -130,12 +130,12 @@ Download
 
 To get a local working copy of the development repository, do:
 
-    % git clone git://github.com/datagraph/sinatra-linkeddata.git
+    % git clone git://github.com/ruby-rdf/sinatra-linkeddata.git
 
 Alternatively, you can download the latest development version as a tarball
 as follows:
 
-    % wget http://github.com/datagraph/sinatra-linkeddata/tarball/master
+    % wget http://github.com/ruby-rdf/sinatra-linkeddata/tarball/master
 
 References
 ----------
@@ -150,7 +150,7 @@ References
 Authors
 -------
 
-* [Arto Bendiken](mailto:arto.bendiken@gmail.com) - <http://ar.to/>
+* [Arto Bendiken](http://github.com/bendiken) - <http://ar.to/>
 
 License
 -------
@@ -159,7 +159,8 @@ License
 information, see <http://unlicense.org/> or the accompanying UNLICENSE file.
 
 [Sinatra]:          http://www.sinatrarb.com/
-[RDF.rb]:           http://rdf.rubyforge.org/
+[Rack]:             http://rack.github.com/
+[RDF.rb]:           http://ruby-rdf.github.com/rdf/
 [Rack::LinkedData]: http://datagraph.rubyforge.org/rack-linkeddata/
 [Linked Data]:      http://linkeddata.org/
 [conneg]:           http://en.wikipedia.org/wiki/Content_negotiation
