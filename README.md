@@ -1,21 +1,18 @@
-Linked Data Content Negotiation for Sinatra Applications
-========================================================
+# Linked Data Content Negotiation for Sinatra Applications   [![Build Status](https://travis-ci.org/ruby-rdf/sinatra-linkeddata.png?branch=master)](http://travis-ci.org/ruby-rdf/sinatra-linkeddata)
 
 This is a [Sinatra][] extension that provides [Linked Data][] content
 negotiation for Sinatra applications.
 
 * <http://github.com/datagraph/sinatra-linkeddata>
 
-Features
---------
+## Features
 
 * Implements [HTTP content negotiation][conneg] for RDF content types using
   the [`Rack::LinkedData`][Rack::LinkedData] middleware.
 * Supports all [RDF.rb][]-compatible serialization formats.
 * Supports both classic and modular Sinatra applications.
 
-Examples
---------
+## Examples
 
 ### Adding Linked Data content negotiation to a classic Sinatra application
 
@@ -80,8 +77,7 @@ Examples
     $ curl -iH "Accept: application/trix" http://localhost:9292/hello
     $ curl -iH "Accept: */*" http://localhost:9292/hello
 
-Description
------------
+## Description
 
 `Sinatra::LinkedData` is a thin Sinatra-specific wrapper around the
 [`Rack::LinkedData`][Rack::LinkedData] middleware, which implements Linked
@@ -104,29 +100,25 @@ to doing the following manually in a Sinatra application:
 See the `Rack::LinkedData` documentation for more information on the
 operation and details of the content negotiation.
 
-Documentation
--------------
+## Documentation
 
-<http://datagraph.rubyforge.org/sinatra-linkeddata/>
+<http://rubydoc.info/github/ruby-rdf/sinatra-linkeddata/>
 
 * {Sinatra::LinkedData}
 
-Dependencies
-------------
+## Dependencies
 
 * [Sinatra](http://rubygems.org/gems/sinatra) (>= 1.0)
 * [Rack::LinkedData](http://rubygems.org/gems/rack-linkeddata) (>= 1.0)
 
-Installation
-------------
+## Installation
 
 The recommended installation method is via [RubyGems](http://rubygems.org/).
 To install the latest official release of the gem, do:
 
     % [sudo] gem install sinatra-linkeddata
 
-Download
---------
+## Download
 
 To get a local working copy of the development repository, do:
 
@@ -137,8 +129,7 @@ as follows:
 
     % wget http://github.com/ruby-rdf/sinatra-linkeddata/tarball/master
 
-References
-----------
+## References
 
 * <http://www.w3.org/DesignIssues/LinkedData.html>
 * <http://linkeddata.org/docs/how-to-publish>
@@ -147,13 +138,11 @@ References
 * <http://www.w3.org/TR/swbp-vocab-pub/>
 * <http://patterns.dataincubator.org/book/publishing-patterns.html>
 
-Authors
--------
+## Authors
 
 * [Arto Bendiken](http://github.com/bendiken) - <http://ar.to/>
 
-License
--------
+## License
 
 `Sinatra::LinkedData` is free and unencumbered public domain software. For more
 information, see <http://unlicense.org/> or the accompanying UNLICENSE file.
