@@ -1,14 +1,9 @@
 $:.unshift "."
 require 'spec_helper'
-require 'rack/test'
 require 'sinatra'
 
-describe Sinatra::LinkedData do
-  include ::Rack::Test::Methods
-
-  def app
-    Sinatra::Application
-  end
+class SPTest < Sinatra::Base
+  register Sinatra::LinkedData
 
   get '/' do
     body "A String"
@@ -17,6 +12,16 @@ describe Sinatra::LinkedData do
   get '/graph' do
     settings.linkeddata_options.merge!(:format => (params["fmt"] ? params["fmt"].to_sym : nil))
     body RDF::Graph.new << [RDF::Node('a'), RDF::URI('b'), "c"]
+  end
+end
+
+require 'rack/test'
+
+describe Sinatra::LinkedData do
+  include ::Rack::Test::Methods
+
+  def app
+    SPTest.new
   end
 
   describe "self.registered" do
