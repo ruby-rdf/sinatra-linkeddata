@@ -1,9 +1,12 @@
-# Linked Data Content Negotiation for Sinatra Applications   [![Build Status](https://travis-ci.org/ruby-rdf/sinatra-linkeddata.png?branch=master)](http://travis-ci.org/ruby-rdf/sinatra-linkeddata)
+# Linked Data Content Negotiation for Sinatra Applications
 
 This is a [Sinatra][] extension that provides [Linked Data][] content
 negotiation for Sinatra applications.
 
 * <http://github.com/datagraph/sinatra-linkeddata>
+
+[![Gem Version](https://badge.fury.io/rb/sinatra-linkeddata.png)][gem]
+[![Build Status](https://travis-ci.org/ruby-rdf/sinatra-linkeddata.png?branch=master)](http://travis-ci.org/ruby-rdf/sinatra-linkeddata)
 
 ## Features
 
