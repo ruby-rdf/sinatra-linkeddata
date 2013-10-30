@@ -111,8 +111,8 @@ operation and details of the content negotiation.
 
 ## Dependencies
 
-* [Sinatra](http://rubygems.org/gems/sinatra) (>= 1.0)
-* [Rack::LinkedData](http://rubygems.org/gems/rack-linkeddata) (>= 1.0)
+* [Sinatra](http://rubygems.org/gems/sinatra) (>= 1.4.4)
+* [Rack::LinkedData](http://rubygems.org/gems/rack-linkeddata) (>= 1.0.9)
 
 ## Installation
 

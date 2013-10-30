@@ -11,7 +11,7 @@ class SPTest < Sinatra::Base
 
   get '/graph' do
     settings.linkeddata_options.merge!(:format => (params["fmt"] ? params["fmt"].to_sym : nil))
-    body RDF::Graph.new << [RDF::Node('a'), RDF::URI('b'), "c"]
+    body RDF::Graph.new << [RDF::Node('a'), RDF.URI('http://example/b'), "c"]
   end
 end
 
@@ -33,16 +33,16 @@ describe Sinatra::LinkedData do
   context "serializes graphs" do
     context "with format" do
       {
-        :ntriples => /_:a <b> "c" \./,
-        :ttl => /[ <b> "c"]/
+        :ntriples => %r{_:a <http://example/b> "c" \.},
+        :ttl => %r{\[ <http://example/b> "c"\]}
       }.each do |fmt, expected|
         context fmt do
           it "returns serialization" do
             get '/graph', :fmt => fmt
-            last_response.status.should == 200
-            last_response.body.should match(expected)
-            last_response.content_type.should == RDF::Format.for(fmt).content_type.first
-            last_response.content_length.should_not == 0
+            expect(last_response.status).to eq 200
+            expect(last_response.body).to match(expected)
+            expect(last_response.content_type).to eq RDF::Format.for(fmt).content_type.first
+            expect(last_response.content_length).not_to eq 0
           end
         end
       end
@@ -50,16 +50,16 @@ describe Sinatra::LinkedData do
     
     context "with Accept" do
       {
-        "text/plain" => /_:a <b> "c" \./,
-        "text/turtle" => /[ <b> "c"]/
-      }.each do |content_types, expected|
-        context content_types do
+        "text/plain" => %r{_:a <http://example/b> "c" \.},
+        "text/turtle" => %r{\[ <http://example/b> "c"\]}
+      }.each do |content_type, expected|
+        context content_type do
           it "returns serialization" do
-            get '/graph', {}, {"HTTP_ACCEPT" => content_types}
-            last_response.status.should == 200
-            last_response.body.should match(expected)
-            last_response.content_type.should == content_types
-            last_response.content_length.should_not == 0
+            get '/graph', {}, {"HTTP_ACCEPT" => content_type}
+            expect(last_response.status).to eq 200
+            expect(last_response.body).to match(expected)
+            expect(last_response.content_type).to eq content_type
+            expect(last_response.content_length).not_to eq 0
           end
         end
       end
