@@ -27,8 +27,8 @@ Gem::Specification.new do |gem|
 
   gem.required_ruby_version      = '>= 1.9.2'
   gem.requirements               = []
-  gem.add_runtime_dependency     'rack-linkeddata', '>= 1.1.0'
-  gem.add_runtime_dependency     'sinatra',         '>= 1.4.4'
+  gem.add_runtime_dependency     'rack-linkeddata', '>= 1.0'
+  gem.add_runtime_dependency     'sinatra',         '>= 1.3.3'
 
   gem.add_development_dependency 'yard' ,           '>= 0.8'
   gem.add_development_dependency 'rspec',           '>= 2.14'
