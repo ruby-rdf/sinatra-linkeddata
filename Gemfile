@@ -24,4 +24,6 @@ gem 'sparql-client',  :git => "git://github.com/ruby-rdf/sparql-client.git", :br
 
 group :development do
   gem "wirble"
+  gem 'debugger', :platforms => :mri_19
+  gem 'byebug', :platforms => :mri_20
 end
