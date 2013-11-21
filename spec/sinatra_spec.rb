@@ -41,7 +41,7 @@ describe Sinatra::LinkedData do
             get '/graph', :fmt => fmt
             expect(last_response.status).to eq 200
             expect(last_response.body).to match(expected)
-            expect(last_response.content_type).to eq RDF::Format.for(fmt).content_type.first
+            expect(RDF::Format.for(fmt).content_type).to include(last_response.content_type)
             expect(last_response.content_length).not_to eq 0
           end
         end
@@ -50,8 +50,8 @@ describe Sinatra::LinkedData do
     
     context "with Accept" do
       {
-        "text/plain" => %r{_:a <http://example/b> "c" \.},
-        "text/turtle" => %r{\[ <http://example/b> "c"\]}
+        "application/n-triples" => %r{_:a <http://example/b> "c" \.},
+        "application/turtle" => %r{\[ <http://example/b> "c"\]}
       }.each do |content_type, expected|
         context content_type do
           it "returns serialization" do
