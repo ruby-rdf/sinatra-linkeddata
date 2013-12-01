@@ -33,5 +33,10 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'yard' ,           '>= 0.8'
   gem.add_development_dependency 'rspec',           '>= 2.14'
   gem.add_development_dependency 'rack-test',       '>= 0.6'
+
+  # Rubinius has it's own dependencies
+  if RUBY_ENGINE == "rbx" && RUBY_VERSION >= "2.1.0"
+    gem.add_development_dependency 'logger'
+  end
   gem.post_install_message       = nil
 end

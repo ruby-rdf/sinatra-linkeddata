@@ -22,7 +22,9 @@ gem 'json-ld',        :git => "git://github.com/ruby-rdf/json-ld.git", :branch =
 gem 'sparql',         :git => "git://github.com/ruby-rdf/sparql.git", :branch => "develop"
 gem 'sparql-client',  :git => "git://github.com/ruby-rdf/sparql-client.git", :branch => "develop"
 
-group :development do
+gem 'nokogiri'
+
+group :debug do
   gem "wirble"
   gem 'debugger', :platforms => :mri_19
   gem 'byebug', :platforms => :mri_20
