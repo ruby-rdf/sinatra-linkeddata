@@ -73,8 +73,8 @@ negotiation for Sinatra applications.
 
     $ rackup doc/examples/config.ru
     
-    $ curl -iH "Accept: text/plain" http://localhost:9292/hello
-    $ curl -iH "Accept: text/turtle" http://localhost:9292/hello
+    $ curl -iH "Accept: application/n-triples" http://localhost:9292/hello
+    $ curl -iH "Accept: application/turtle" http://localhost:9292/hello
     $ curl -iH "Accept: application/rdf+xml" http://localhost:9292/hello
     $ curl -iH "Accept: application/json" http://localhost:9292/hello
     $ curl -iH "Accept: application/trix" http://localhost:9292/hello
