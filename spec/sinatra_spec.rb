@@ -26,7 +26,7 @@ describe Sinatra::LinkedData do
 
   describe "self.registered" do
     it "sets :linkeddata_options" do
-      Sinatra::Application.linkeddata_options.should be_a(Hash)
+      expect(Sinatra::Application.linkeddata_options).to be_a(Hash)
     end
   end
 

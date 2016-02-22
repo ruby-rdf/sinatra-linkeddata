@@ -25,14 +25,14 @@ Gem::Specification.new do |gem|
   gem.test_files         = %w()
   gem.has_rdoc           = false
 
-  gem.required_ruby_version      = '>= 1.9.2'
+  gem.required_ruby_version      = '>= 2.0'
   gem.requirements               = []
-  gem.add_runtime_dependency     'rack-linkeddata', '>= 1.1.0'
-  gem.add_runtime_dependency     'sinatra',         '>= 1.4.4'
+  gem.add_runtime_dependency     'rack-linkeddata', '~> 2.0.0.beta'
+  gem.add_runtime_dependency     'sinatra',         '~> 1.4'
 
-  gem.add_development_dependency 'yard' ,           '>= 0.8'
-  gem.add_development_dependency 'rspec',           '>= 2.14'
-  gem.add_development_dependency 'rack-test',       '>= 0.6'
+  gem.add_development_dependency 'yard' ,           '~> 0.8'
+  gem.add_development_dependency 'rspec',           '~> 3.4'
+  gem.add_development_dependency 'rack-test',       '~> 0.6'
 
   # Rubinius has it's own dependencies
   if RUBY_ENGINE == "rbx" && RUBY_VERSION >= "2.1.0"
