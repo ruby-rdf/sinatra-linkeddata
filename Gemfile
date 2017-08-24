@@ -29,11 +29,17 @@ gem 'nokogiri'
 
 group :development do
   gem "ebnf",             github: "gkellogg/ebnf",                branch: "develop"
-  gem "sxp",              github: "dryruby/sxp.rb",               branch: "develop"
-  gem "wirble"
+  gem 'sxp',              github: "dryruby/sxp.rb",               branch: "develop"
 end
 
 platforms :rbx do
   gem 'rubysl', '~> 2.0'
   gem 'rubinius', '~> 2.0'
+end
+
+case ENV['SINATRA_VERSION']
+when /^1.4/
+  gem 'sinatra', '~> 1.4'
+when /^2.0/
+  gem 'sinatra', '~> 2.0'
 end
