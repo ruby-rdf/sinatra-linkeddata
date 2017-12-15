@@ -27,7 +27,7 @@ Gem::Specification.new do |gem|
 
   gem.required_ruby_version      = '>= 2.2'
   gem.requirements               = []
-  gem.add_runtime_dependency     'rack-linkeddata', '~> 2.2'
+  gem.add_runtime_dependency     'rack-linkeddata', '>= 2.2', '< 4.0'
   gem.add_runtime_dependency     'sinatra',         '>= 1.4', '< 3.0'
 
   gem.add_development_dependency 'yard' ,           '~> 0.9'
