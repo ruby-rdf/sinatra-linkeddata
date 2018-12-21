@@ -12,7 +12,7 @@ Gem::Specification.new do |gem|
   gem.description        = 'Sinatra extension for Linked Data content negotiation.'
   gem.rubyforge_project  = 'datagraph'
 
-  gem.authors            = ['Arto Bendiken']
+  gem.authors            = ['Arto Bendiken', 'Gregg Kellogg']
   gem.email              = 'public-rdf-ruby@w3.org'
 
   gem.platform           = Gem::Platform::RUBY
@@ -23,12 +23,12 @@ Gem::Specification.new do |gem|
 
   gem.required_ruby_version      = '>= 2.2'
   gem.requirements               = []
-  gem.add_runtime_dependency     'rack-linkeddata', '>= 2.2', '< 4.0'
-  gem.add_runtime_dependency     'sinatra',         '>= 1.4', '< 3.0'
+  gem.add_runtime_dependency     'rack-linkeddata', '~> 3.0'
+  gem.add_runtime_dependency     'sinatra',         '~> 2.0'
 
   gem.add_development_dependency 'yard' ,           '~> 0.9.12'
   gem.add_development_dependency 'rspec',           '~> 3.7'
-  gem.add_development_dependency 'rack-test',       '~> 0.8'
+  gem.add_development_dependency 'rack-test',       '~> 1.1'
 
   # Rubinius has it's own dependencies
   if RUBY_ENGINE == "rbx" && RUBY_VERSION >= "2.1.0"
