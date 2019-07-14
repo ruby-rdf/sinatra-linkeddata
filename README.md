@@ -5,8 +5,8 @@ negotiation for Sinatra applications.
 
 * <http://github.com/datagraph/sinatra-linkeddata>
 
-[![Gem Version](https://badge.fury.io/rb/sinatra-linkeddata.png)](http://badge.fury.io/rb/sinatra-linkeddata)
-[![Build Status](https://travis-ci.org/ruby-rdf/sinatra-linkeddata.png?branch=master)](http://travis-ci.org/ruby-rdf/sinatra-linkeddata)
+[![Gem Version](https://badge.fury.io/rb/sinatra-linkeddata.svg)](http://badge.fury.io/rb/sinatra-linkeddata)
+[![Build Status](https://travis-ci.org/ruby-rdf/sinatra-linkeddata.svg?branch=master)](http://travis-ci.org/ruby-rdf/sinatra-linkeddata)
 
 ## Features
 
