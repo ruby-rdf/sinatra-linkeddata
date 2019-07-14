@@ -19,55 +19,61 @@ negotiation for Sinatra applications.
 
 ### Adding Linked Data content negotiation to a classic Sinatra application
 
-    #!/usr/bin/env ruby -rubygems
-    require 'sinatra'
-    require 'sinatra/linkeddata'
-    
+```ruby
+#!/usr/bin/env ruby -rubygems
+require 'sinatra'
+require 'sinatra/linkeddata'
+
+get '/hello' do
+  RDF::Graph.new do |graph|
+    graph << [RDF::Node.new, RDF::DC.title, "Hello, world!"]
+  end
+end
+```
+
+### Adding Linked Data content negotiation to a modular Sinatra application
+
+```ruby
+#!/usr/bin/env ruby -rubygems
+require 'sinatra/base'
+require 'sinatra/linkeddata'
+
+module My
+  class Application < Sinatra::Base
+    register Sinatra::LinkedData
+
     get '/hello' do
       RDF::Graph.new do |graph|
         graph << [RDF::Node.new, RDF::DC.title, "Hello, world!"]
       end
     end
+  end
+end
 
-### Adding Linked Data content negotiation to a modular Sinatra application
-
-    #!/usr/bin/env ruby -rubygems
-    require 'sinatra/base'
-    require 'sinatra/linkeddata'
-    
-    module My
-      class Application < Sinatra::Base
-        register Sinatra::LinkedData
-    
-        get '/hello' do
-          RDF::Graph.new do |graph|
-            graph << [RDF::Node.new, RDF::DC.title, "Hello, world!"]
-          end
-        end
-      end
-    end
-    
-    My::Application.run! :host => '127.0.0.1', :port => 4567
+My::Application.run! :host => '127.0.0.1', :port => 4567
+```
 
 ### Adding Linked Data content negotiation to a Rackup application
 
-    #!/usr/bin/env rackup
-    require 'sinatra/base'
-    require 'sinatra/linkeddata'
-    
-    module My
-      class Application < Sinatra::Base
-        register Sinatra::LinkedData
-    
-        get '/hello' do
-          RDF::Graph.new do |graph|
-            graph << [RDF::Node.new, RDF::DC.title, "Hello, world!"]
-          end
-        end
+```ruby
+#!/usr/bin/env rackup
+require 'sinatra/base'
+require 'sinatra/linkeddata'
+
+module My
+  class Application < Sinatra::Base
+    register Sinatra::LinkedData
+
+    get '/hello' do
+      RDF::Graph.new do |graph|
+        graph << [RDF::Node.new, RDF::DC.title, "Hello, world!"]
       end
     end
-    
-    run My::Application
+  end
+end
+
+run My::Application
+```
 
 ### Testing Linked Data content negotiation using `rackup` and `curl`
 
@@ -89,25 +95,25 @@ Data content negotiation for Rack applications.
 At the moment the Sinatra extension simply corresponds
 to doing the following manually in a Sinatra application:
 
-    require 'rack/linkeddata'
-    
-    module My
-      class Application < Sinatra::Base
-        use     Rack::LinkedData::ContentNegotiation
-        helpers Sinatra::LinkedData::Helpers
-        include RDF
-        include LinkedData
-      end
-    end
+```ruby
+require 'rack/linkeddata'
+
+module My
+  class Application < Sinatra::Base
+    use     Rack::LinkedData::ContentNegotiation
+    helpers Sinatra::LinkedData::Helpers
+    include RDF
+    include LinkedData
+  end
+end
+```
 
 See the `Rack::LinkedData` documentation for more information on the
 operation and details of the content negotiation.
 
 ## Documentation
 
-<http://rubydoc.info/github/ruby-rdf/sinatra-linkeddata/>
-
-* {Sinatra::LinkedData}
+* [Sinatra::LinkedData](https://www.rubydoc.info/github/ruby-rdf/sinatra-linkeddata/master)
 
 ## Dependencies
 
