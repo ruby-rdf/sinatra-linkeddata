@@ -34,7 +34,7 @@ describe Sinatra::LinkedData do
     context "with format" do
       {
         :ntriples => %r{_:a <http://example/b> "c" \.},
-        :ttl => %r{\[ <http://example/b> "c"\]}
+        :ttl => %r{\[\s*<http://example/b> "c"\]}
       }.each do |fmt, expected|
         context fmt do
           it "returns serialization" do
@@ -51,7 +51,7 @@ describe Sinatra::LinkedData do
     context "with Accept" do
       {
         "application/n-triples" => %r{_:a <http://example/b> "c" \.},
-        "application/turtle" => %r{\[ <http://example/b> "c"\]}
+        "application/turtle" => %r{\[\s*<http://example/b> "c"\]}
       }.each do |content_type, expected|
         context content_type do
           it "returns serialization" do
