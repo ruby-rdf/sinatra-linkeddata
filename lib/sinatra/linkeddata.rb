@@ -5,7 +5,7 @@ module Sinatra
   ##
   # To override negotiation on Content-Type, set :format in `linkeddata_options` to a RDF Format class, or symbol identifying a format.
   #
-  # @see http://www.sinatrarb.com/extensions.html
+  # @see https://www.sinatrarb.com/extensions.html
   module LinkedData
     autoload :VERSION, 'sinatra/linkeddata/version'
 
