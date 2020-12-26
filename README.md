@@ -3,10 +3,10 @@
 This is a [Sinatra][] extension that provides [Linked Data][] content
 negotiation for Sinatra applications.
 
-* <https://github.com/ruby-rdf/sinatra-linkeddata>
 
 [![Gem Version](https://badge.fury.io/rb/sinatra-linkeddata.svg)](https://badge.fury.io/rb/sinatra-linkeddata)
-[![Build Status](https://travis-ci.org/ruby-rdf/sinatra-linkeddata.svg?branch=master)](https://travis-ci.org/ruby-rdf/sinatra-linkeddata)
+[![Build Status](https://github.com/ruby-rdf/sinatra-linkeddata/workflows/CI/badge.svg?branch=develop)](https://github.com/ruby-rdf/sinatra-linkeddata/actions?query=workflow%3ACI)
+[![Gitter chat](https://badges.gitter.im/ruby-rdf/rdf.png)](https://gitter.im/ruby-rdf/rdf)
 
 ## Features
 
