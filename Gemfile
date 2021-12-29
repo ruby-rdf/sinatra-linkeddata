@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gemspec
 
+gem 'rack-rdf',           git: "https://github.com/ruby-rdf/rack-rdf",            branch: "develop"
 gem 'rack-linkeddata',    git: "https://github.com/ruby-rdf/rack-linkeddata",     branch: "develop"
 gem "linkeddata",         git: "https://github.com/ruby-rdf/linkeddata",          branch: "develop"
 gem 'json-ld',            git: "https://github.com/ruby-rdf/json-ld",             branch: "develop"

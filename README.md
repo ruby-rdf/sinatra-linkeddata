@@ -11,7 +11,7 @@ negotiation for Sinatra applications.
 ## Features
 
 * Implements [HTTP content negotiation][conneg] for RDF content types using
-  the [`Rack::LinkedData`][Rack::LinkedData] middleware.
+  the `[Rack::LinkedData][Rack::LinkedData]` middleware.
 * Supports all [RDF.rb][] -compatible serialization formats.
 * Supports both classic and modular Sinatra applications.
 
@@ -89,7 +89,7 @@ run My::Application
 ## Description
 
 `Sinatra::LinkedData` is a thin Sinatra-specific wrapper around the
-[`Rack::LinkedData`][Rack::LinkedData] middleware, which implements Linked
+`[Rack::LinkedData][Rack::LinkedData]` middleware, which implements Linked
 Data content negotiation for Rack applications.
 
 At the moment the Sinatra extension simply corresponds
@@ -108,7 +108,7 @@ module My
 end
 ```
 
-See the `Rack::LinkedData` documentation for more information on the
+See the `[Rack::LinkedData][Rack::LinkedData]` documentation for more information on the
 operation and details of the content negotiation.
 
 ## Documentation
