@@ -113,7 +113,7 @@ operation and details of the content negotiation.
 
 ## Documentation
 
-* [Sinatra::LinkedData](https://www.rubydoc.info/github/ruby-rdf/sinatra-linkeddata/master)
+* [Sinatra::LinkedData](https://ruby-rdf.github.io/sinatra-linkeddata/master)
 
 ## Dependencies
 
@@ -158,7 +158,7 @@ information, see <https://unlicense.org/> or the accompanying UNLICENSE file.
 
 [Sinatra]:          https://www.sinatrarb.com/
 [Rack]:             https://rack.github.com/
-[RDF.rb]:           https://ruby-rdf.github.com/rdf/
+[RDF.rb]:           https://ruby-rdf.github.io/rdf/
 [Rack::LinkedData]: https://rubygems.org/gems/rack-linkeddata/
 [Linked Data]:      https://linkeddata.org/
 [conneg]:           https://en.wikipedia.org/wiki/Content_negotiation
