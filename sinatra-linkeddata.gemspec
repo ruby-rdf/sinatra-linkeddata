@@ -27,10 +27,10 @@ Gem::Specification.new do |gem|
   gem.executables        = %w()
   gem.require_paths      = %w(lib)
 
-  gem.required_ruby_version      = '>= 2.6'
+  gem.required_ruby_version      = '>= 3.0'
   gem.requirements               = []
-  gem.add_runtime_dependency     'rack-linkeddata', '~> 3.2', '>= 3.2.3'
-  gem.add_runtime_dependency     'sinatra',         '~> 3.0'
+  gem.add_runtime_dependency     'rack-linkeddata', '~> 3.3'
+  gem.add_runtime_dependency     'sinatra',         '~> 3.1'
 
   gem.add_development_dependency 'yard' ,           '~> 0.9'
   gem.add_development_dependency 'rspec',           '~> 3.12'
