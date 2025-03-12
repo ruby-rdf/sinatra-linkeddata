@@ -4,6 +4,7 @@ require 'sinatra'
 
 class SPTest < Sinatra::Base
   register Sinatra::LinkedData
+  set :host_authorization, { permitted_hosts: [] }
 
   get '/' do
     body "A String"
