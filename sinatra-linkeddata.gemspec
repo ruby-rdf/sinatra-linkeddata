@@ -30,10 +30,10 @@ Gem::Specification.new do |gem|
   gem.required_ruby_version      = '>= 3.0'
   gem.requirements               = []
   gem.add_runtime_dependency     'rack-linkeddata', '~> 3.3', '>= 3.3.1'
-  gem.add_runtime_dependency     'sinatra',         '~> 4.0'
+  gem.add_runtime_dependency     'sinatra',         '~> 4.1'
 
   gem.add_development_dependency 'yard' ,           '~> 0.9'
-  gem.add_development_dependency 'rspec',           '~> 3.12'
-  gem.add_development_dependency 'rack-test',       '~> 2.1'
+  gem.add_development_dependency 'rspec',           '~> 3.13'
+  gem.add_development_dependency 'rack-test',       '~> 2.2'
   gem.post_install_message       = nil
 end
